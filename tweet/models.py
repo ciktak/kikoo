@@ -11,4 +11,4 @@ class Post(models.Model):
     dislikes = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.content
+        return self.content[:30]

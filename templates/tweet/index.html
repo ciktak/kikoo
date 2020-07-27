@@ -158,7 +158,7 @@
         <div class="hr-bar">
             <hr class="block h-3 w-full">
         </div>
-
+{% for post in posts %}
         <!-- tweets wrapper start -->
         <div class="tweets-wrapper">
             <div class="innner">
@@ -183,7 +183,7 @@
                             <div class="tweet-tweet">
                                 <!-- tweet info bar start -->
                                 <div class="tweet-info-bar flex items-center">
-                                    <a href="#" class="hover:underline text-gray-900 font-bold text-base mr-1">The Secret Barrister</a>
+                                    <a href="#" class="hover:underline text-gray-900 font-bold text-base mr-1">{{ post.author }}</a>
                                     <span class="text-gray-600 text-base font-light tracking-wide">@BarristerSecret</span>
                                     <span class="inline-block ml-1">·</span>
                                     <span class="text-gray-600 text-base font-light tracking-wide inline-block ml-1">3h</span>
@@ -192,8 +192,7 @@
                                 <!-- tweet detail start -->
                                 <div class="tweet-detail">
                                     <p>
-                                        good mornig. wish a successfull week to all. Look for good in every situation. ignore waht people
-                                        say about you
+                                        {{ post.content }}
                                         <a class="font-semibold" href="##MondayMotivation">#MondayMotivation</a>
                                     </p>
                                 </div>
@@ -419,6 +418,7 @@
             </div>
         </div>
         <!-- tweets wrapper end -->
+        {% endfor %}
     </div>
     <!-- middle colulmn end -->
 
